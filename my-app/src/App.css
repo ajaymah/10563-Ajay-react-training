@@ -1,0 +1,72 @@
+.wraperSearchList{
+    background-color: #f7f7f7;
+    padding: 0px;
+    max-width: 300px;
+}
+.wraperSearchList h4{
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+.wraperSearchListInner{
+    background-color:#132332;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid #cacaca;
+    font-family: 'Arial';
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    padding: 10px 18px;
+    box-sizing: border-box;
+}
+button.button {
+    background: #ffc107;
+    border: 0;
+    text-align: center;
+    font-family: 'Arial';
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 10px 36px 10px;
+    border-radius: 4px;
+}
+.form-group{
+    padding-bottom:15px ;
+}
+.txtCenter{
+    text-align: left;
+}
+.listings{
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.listings li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-decoration: none;
+    list-style-type: none;
+    background: #ddd;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border-left: 10px solid #efb714;
+    word-break: break-word;
+    /*background-image: url("/src/assets/note.png");*/
+   
+}
+.blockHead{
+    background-color:#132332;
+    padding: 10px;
+}
+.blockHead h3{
+    margin: 0;
+    color: #fff;
+}
+.formWrapper{
+    padding: 10px 10px 0;
+}
