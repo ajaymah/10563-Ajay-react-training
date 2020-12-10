@@ -59,6 +59,11 @@ button.button {
     /*background-image: url("/src/assets/note.png");*/
    
 }
+.listings li img{
+    width: 20px;
+    float: right;
+    cursor: pointer;
+}
 .blockHead{
     background-color:#132332;
     padding: 10px;

@@ -9,15 +9,15 @@ class Todolist extends Component {
             fname: '',
             lname:''
         };
-        console.log();
     }
     static getDerivedStateFromProps(props, state) {
-        const listData = JSON.parse(localStorage.getItem('tododata'));
-        
+        //const listData = JSON.parse(localStorage.getItem('tododata'));
+        console.log('2')
         return null;
     }
     componentDidMount() {
         const listData = JSON.parse(localStorage.getItem('tododata'));
+        console.log(1)
         if(listData){
             this.setState((state) => ({
                  todoList: listData
@@ -42,12 +42,21 @@ class Todolist extends Component {
 
     };
 
-    handleChange = (e) => {
-        console.log(e.target.name)
+    removeItemToDolist = (i)=>{
+        const listData = JSON.parse(localStorage.getItem('tododata'));
+        listData.splice(i,1);
+        localStorage.setItem("tododata", JSON.stringify(listData));
+        if(listData){
+            this.setState((state) => ({
+                 todoList: listData
+            }))
+        } 
+    }
+
+    handleChange = (e) => {    
         this.setState({
             [e.target.name]: e.target.value,
         });
-       // console.log(this.state)
     };
 
     render() {
@@ -59,7 +68,7 @@ class Todolist extends Component {
                         <h3>ToDoList [{todoList.length}]</h3>
                     </div>                   
                         <Add labelText={'Add'} handleChange={this.handleChange} fname={fname} lname={lname}  addtodoItem={this.addToDo} />  
-                        <List data={todoList} />
+                        <List data={todoList} removeItemToDolist={this.removeItemToDolist} />
                 </div>
             </div>
         );
